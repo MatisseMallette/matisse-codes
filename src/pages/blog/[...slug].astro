@@ -1,5 +1,5 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content';
+import { CollectionEntry, getCollection, getEntries } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
 export async function getStaticPaths() {
@@ -9,13 +9,13 @@ export async function getStaticPaths() {
 		props: post,
 	}));
 }
-type Props = CollectionEntry<'blog'>;
-
+type Props = CollectionEntry<'blog'>; // NOTE: Apparently this has something to do with type script?
 const post = Astro.props;
 const { Content } = await post.render();
+const d = await getEntries(post.data.relatedPosts);
 ---
 
 <BlogPost {...post.data}>
 	<h1>{post.data.title}</h1>
-	<Content />
+	<Content /> <!-- NOTE: The <Content /> object is returned by both the getEntry() and getCollection() functions -->
 </BlogPost>
