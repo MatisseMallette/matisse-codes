@@ -20,7 +20,7 @@ const blogCollection = defineCollection({
 		//
 		//
 		// Now I (Matisse) begin defining the schema some more
-		tags: z.array(z.string()).optional(),
+		tags: z.array(z.string())
 	}),
 });
 

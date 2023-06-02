@@ -9,13 +9,13 @@ export async function getStaticPaths() {
 		props: post,
 	}));
 }
+
 type Props = CollectionEntry<'blog'>; // NOTE: Apparently this has something to do with type script?
 const post = Astro.props;
 const { Content } = await post.render();
-const d = await getEntries(post.data.relatedPosts);
+
 ---
 
 <BlogPost {...post.data}>
-	<h1>{post.data.title}</h1>
 	<Content /> <!-- NOTE: The <Content /> object is returned by both the getEntry() and getCollection() functions -->
 </BlogPost>

@@ -28,7 +28,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 		</style>
 	</head>
 
-	<body>
+	<body class='markdown-body'>
 		<Header />
 		<main>
 			<article>
@@ -45,10 +45,9 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 				<hr />
 
 				<nav>
-				<p>Tags:
-				{
-					tags && tags.map((tag) => (
-					<a href={`../tags/${tag}`}>{tag}</a> // TODO: fix, finish, style and refactor this bit (look at the HeaderLink component maybe)
+				<p>
+					Tags: {tags && tags.map((tag) => (
+					<a href={`/tags/${tag}`}>{tag}</a> // TODO: fix, finish, style and refactor this bit (look at the HeaderLink component maybe)
 					))
 				}
 				 </p>
