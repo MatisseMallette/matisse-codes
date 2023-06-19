@@ -1023,3 +1023,12 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+/* experimenting */
+
+@media screen and (max-width: 1200px) {
+  .markdown-body {
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+}

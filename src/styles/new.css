@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Cormorant+SC:wght@300;500;700&family=Courier+Prime&family=PT+Serif&family=Rock+Salt&display=swap');
+
+h1 {
+    font-family: "Cormorant SC", Arial, sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: "Cormorant SC", Arial, sans-serif;
+    font-weight: 500;
+}
+
+.howdy {
+    font-family: "Rock Salt", Arial, sans-serif;
+    margin-top: 2em;
+    line-height: 0.5em;
+}
+
+p, li, nav {
+    font-family: "Cormorant Garamond", Arial, sans-serif;
+}
+
+
+#header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#headshot {
+    background-image: url("me.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 125px;
+    height: 125px;
+    /* TODO: I WILL MAKE THIS ALL DYNAMIC */
+    margin-right: 2em;
+    margin-top: 3.5em;
+    float: left;
+    clear: both;
+    border-radius: 50%;
+}
+
+#intro {
+    display: table;
+    margin-top: 2em;
+    position: relative;
+}
+
+#intro h1 {
+    font-size: 24px;
+    line-height: 1;
+}
+
+#intro h2 {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.sticky {
+    padding: 25px;
+    text-align: center;
+    font-style: italic;
+    /* TODO: figure this out */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin-top: 2em;
+}
+
+li { 
+    white-space: nowrap;
+}
+
+#bio {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+#bio p {
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 700px) {
+    #bio {
+        max-width: 700px;
+    }
+}

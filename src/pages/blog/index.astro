@@ -36,18 +36,20 @@ const posts = (await getCollection('blog')).sort(
 	<body class='markdown-body'>
 		<Header />
 		<main>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<FormattedDate date={post.data.pubDate} />
-								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
+			<div class="center">
+				<section>
+					<ul>
+						{
+							posts.map((post) => (
+								<li>
+									<FormattedDate date={post.data.pubDate} />
+									<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+								</li>
+							))
+						}
+					</ul>
+				</section>
+			</div>
 		</main>
 		<Footer />
 	</body>

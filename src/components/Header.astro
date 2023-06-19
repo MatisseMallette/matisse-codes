@@ -1,25 +1,56 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://www.linkedin.com/in/matisse-mallette/" target="_blank">LinkedIn</HeaderLink>
-		<HeaderLink href="https://github.com/matissemallette" target="_blank">GitHub</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-	</nav>
+	<div id="header-wrapper">
+			<div id="headshot"></div>
+		<div id="intro">
+			<h1>Matisse Mallette</h1>
+			<h2>Backend Web Developer</h2>
+			<nav>
+				<HeaderLink href="/">Home</HeaderLink>
+				<!-- <HeaderLink href="/about">About</HeaderLink> -->
+				<HeaderLink
+					href="https://www.linkedin.com/in/matisse-mallette/"
+					target="_blank"
+				>
+					LinkedIn
+				</HeaderLink>
+				<HeaderLink
+					href="https://github.com/matissemallette"
+					target="_blank"
+				>
+					GitHub
+				</HeaderLink>
+				<HeaderLink href="/blog">Blog</HeaderLink>
+			</nav>
+		</div>
+	</div>
+
+	<!-- 
+	<div id="bio">
+
+		<h1>Hello, world!</h1>
+		<h2>I'm Matisse,</h2>
+		<p>
+			I’m a Northern Virgina based web developer, recently graduated from
+			the Turing School of Software & Design, and interested in creating
+			meaningful impact through the code I write. With a self-taught
+			background in game programming and my interest in Linux, playing
+			with emerging tech and solving problems and creating memories with
+			it is my jam.
+		</p>
+		<p>Let’s connect!</p>
+	</div> -->
 </header>
-<style>
+
+<!-- <style>
 	header {
 		margin: 0em 0 2em;
 	}
 	h2 {
 		margin: 0.5em 0;
 	}
-</style>
+</style> -->
